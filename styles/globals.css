@@ -1,0 +1,104 @@
+html,
+body {
+  min-height: 100%;
+}
+
+*::-webkit-scrollbar-track {
+  /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+  border-radius: 10px;
+  background-color: #f5f5f500;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+  background-color: #f5f5f500;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+  background-color: #ffffff26;
+}
+
+#__next {
+  height: 100%;
+}
+
+code {
+  font-family: 'Inter', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue';
+  padding: 0.1rem 0.4rem;
+  font-size: 90%;
+  color: #d400ff;
+  border-radius: 0.1335rem;
+}
+code:not([class*='language-']):before,
+code:not([class*='language-']):after {
+  content: '`';
+}
+code[class*='language-'] {
+  padding: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+@media (max-width: 1615px) {
+  .player_table .css-vejicx-MuiPaper-root-MuiCard-root {
+    min-width: 490px;
+  }
+  .player_card {
+    min-width: 490px !important;
+  }
+}
+
+.player_table .css-1yhpg23-MuiTableCell-root {
+  padding: 5px;
+}
+
+.card_height {
+  max-height: 320px;
+  overflow-y: scroll !important;
+}
+.card_height::-webkit-scrollbar {
+  display: none;
+}
+
+.matchLineUpSubBtn {
+  margin-left: 40px !important;
+}
+
+/* updating the sidebar menu */
+
+/*sidebar element */
+
+.css-1e8tnr7-MuiListSubheader-root,
+.css-103ud75 {
+  margin-top: 1rem !important;
+  margin-bottom: 0.5rem !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+.add-player-more-btn {
+  position: absolute;
+}
+
+.more-team-player-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 10px !important;
+}
+
+.ftb_action_btns {
+  transition: 2s ease all;
+}

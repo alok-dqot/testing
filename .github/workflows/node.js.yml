@@ -1,0 +1,38 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+# .github/workflows/node.js.yml
+
+name: Node.js CI
+
+on:
+  push:
+    branches: ['main']
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+      - name: SSH Remote Commands
+        # You may pin to the exact commit or the version.
+        # uses: appleboy/ssh-action@d91a1af6f57cd4478ceee14d7705601dafabaa19
+        uses: appleboy/ssh-action@v0.1.7
+        with:
+          # ssh key
+          password: ${{secrets.SSH_KEY}}
+          # ssh host
+          host: ${{secrets.SSH_HOST}}
+          # ssh user
+          username: ${{secrets.SSH_USER}}
+          script: |
+            sudo -u root whoami
+            cd /var/www/main/pro-dashboard/
+            git stash
+            sudo -u root git pull https://${{secrets.GIT_USER}}:${{secrets.GIT_TOKEN}}@github.com/sports-api/pro-dashboard.git main
+            sudo -u root npm i -f
+            sudo -u root npm run build
