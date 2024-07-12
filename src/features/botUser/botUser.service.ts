@@ -12,7 +12,7 @@ const baseURL = env.baseUrl
 // Create an Axios instance with custom configuration
 const api: AxiosInstance = axios.create({
   baseURL,
-  timeout: 10000, // You can adjust the timeout value as needed
+  timeout: 10000,
   headers: {
     'Content-Type': 'application/json'
   }
@@ -20,10 +20,7 @@ const api: AxiosInstance = axios.create({
 
 
 export function getMatchId(): string | null {
-  const game = JSON.parse(localStorage.getItem('app-utils-test-user') || '')
-
-  const game_id = game?.state?.game?.id
-  return game_id
+  return '1'
 }
 
 

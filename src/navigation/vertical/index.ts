@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import { VerticalNavItemsType } from 'src/@core/layouts/types';
 
 
-const can = (moduleId: number, gameIds: number[]) => ({ moduleId, gameIds });
+// const can = (moduleId: number, gameIds: number[]) => ({ moduleId, gameIds });
 
 export const commonRoutes = [
 
@@ -40,22 +40,25 @@ export const commonRoutes = [
   // },
 
   {
-    title: 'Plans',
+    title: 'Contact Us',
     icon: 'mdi:list-box-outline',
-    path: '/apps/plans/list',
+    path: '/apps/contact-us/list',
     gameIds: [1, 2],
     moduleId: 9
   },
 
   {
-    title: 'Billing',
+    title: 'List',
     icon: 'mdi:list-box-outline',
-    path: '/apps/billing/list',
+    path: '/apps/hotel/list',
     gameIds: [1, 2],
     moduleId: 9
   },
+
 ]
 
+
+//gameRoutes
 
 
 const navigation = (): VerticalNavItemsType => {
